@@ -1,0 +1,255 @@
+<!--
+Personal Portfolio - Single HTML file (Customized)
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LAKSHMI VARA PRASAD MANDALA — Portfolio</title>
+  <meta name="description" content="Fresher portfolio — HTML, CSS, JavaScript">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0f1724;
+      --muted:#94a3b8;
+      --accent:#7c3aed;
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:1100px;
+      --gap:18px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#071023 0%, #071428 50%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color:#e6eef8;
+      padding:32px 18px;
+      display:flex;justify-content:center;
+    }
+    .wrap{width:100%;max-width:var(--maxw);}
+
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#5eead4);display:flex;align-items:center;justify-content:center;font-weight:700;color:#071428}
+    .nav{display:flex;gap:12px;align-items:center}
+    .nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px}
+    .nav a:hover{background:var(--glass);color:var(--accent)}
+    .cta{background:linear-gradient(90deg,var(--accent),#5eead4);color:#071428;padding:9px 14px;border-radius:12px;font-weight:600;text-decoration:none}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:var(--gap);align-items:center;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:24px;border-radius:18px}
+    .intro h1{font-size:28px;margin:0 0 6px}
+    .intro p{margin:0 0 16px;color:var(--muted);line-height:1.5}
+    .actions{display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:600;background:var(--glass);color:inherit}
+    .photo-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:14px;display:flex;flex-direction:column;align-items:center;gap:12px}
+    .photo{width:320px;height:320px;border-radius:12px;overflow:hidden;display:block}
+    .photo img{width:100%;height:100%;object-fit:cover;display:block;}
+    .meta{display:flex;gap:8px;justify-content:center;color:var(--muted)}
+
+    section{margin-top:18px}
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .card{background:var(--glass-2);padding:16px;border-radius:14px}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted);font-weight:600}
+    .projects .proj{display:flex;flex-direction:column;gap:8px}
+    .proj .title{font-weight:700}
+    .proj .desc{color:var(--muted);font-size:14px}
+    .links{display:flex;gap:8px}
+    .chip{padding:8px 10px;border-radius:10px;background:rgba(255,255,255,0.02);text-decoration:none;color:var(--muted)}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:920px){
+      .hero{grid-template-columns:1fr;}
+      .photo{width:100%;height:260px}
+      .cards{grid-template-columns:1fr}
+      .nav{display:none}
+    }
+
+    .logo, .card, .photo-card{transition:transform .28s ease, box-shadow .28s ease}
+    .logo:hover{transform:translateY(-4px)}
+    .card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+    a:focus{outline:2px dashed var(--accent);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="brand">
+        <div class="logo">LM</div>
+        <div>
+          <div style="font-weight:700">LAKSHMI VARA PRASAD MANDALA</div>
+          <div style="font-size:13px;color:var(--muted)">Fresher • BTech CSE • Web Developer</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#contact">Hire Me</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="intro">
+        <div class="intro">
+          <h1 id="intro">Hi — I'm <span style="color:var(--accent)">LAKSHMI VARA PRASAD MANDALA</span></h1>
+          <p>A motivated fresher (B.Tech CSE) building clean web experiences with HTML, CSS and JavaScript. I build small, fast, accessible sites and enjoy learning new tools to ship work quickly.</p>
+          <div class="actions">
+            <a class="btn" href="#projects">See Projects</a>
+            <a class="btn" href="https://github.com/Mlvprasadgithub" target="_blank" rel="noopener">GitHub</a>
+          </div>
+          <div style="margin-top:14px;color:var(--muted);font-size:13px">Open to internships & fresher roles • Ready to relocate</div>
+        </div>
+
+        <aside class="photo-card" aria-label="Profile photo and contact">
+          <figure class="photo">
+            <img src="your-photo.jpg" alt="LAKSHMI VARA PRASAD MANDALA — profile photo">
+          </figure>
+          <div style="text-align:center;font-weight:700">LAKSHMI VARA PRASAD MANDALA</div>
+          <div class="meta">
+            <div>📍 India</div>
+            <div>•</div>
+            <div>💼 Open to work</div>
+          </div>
+          <div style="margin-top:8px;display:flex;gap:8px">
+            <a class="chip" href="https://www.linkedin.com/in/mandala-lakshmi-vara-prasad-32a7312b3" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="chip" href="mailto:mandalalakshmivaraprasad@gmail.com">Email</a>
+            <a class="chip" href="tel:+919100414597">📞 9100414597</a>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about">
+        <div class="cards">
+          <div class="card">
+            <h3>About me</h3>
+            <p style="color:var(--muted)">I am a final-year B.Tech CSE student passionate about front-end development, UI design and problem solving. I work with HTML, CSS and JavaScript and I am learning frameworks like React. I enjoy building projects that I can share and iterate on.</p>
+            <p style="margin-top:8px"><strong>Education:</strong> B.Tech CSE — Your College</p>
+            <p style="margin-top:6px"><strong>Goal:</strong> Get a full-time role as a front-end developer or trainee software engineer.</p>
+          </div>
+
+          <div class="card">
+            <h3>Quick facts</h3>
+            <ul style="color:var(--muted);margin:8px 0 0;padding-left:18px;line-height:1.6">
+              <li>Comfortable with HTML, CSS, JavaScript</li>
+              <li>Version control: Git & GitHub</li>
+              <li>Familiar with basic backend concepts & Firebase</li>
+              <li>Good communication and team collaboration skills</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects">
+        <h2>Selected Projects</h2>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px">
+          <article class="card proj">
+            <div class="title">To-Do List App</div>
+            <div class="desc">A simple CRUD to-do app built with vanilla JS. Features: add, edit, delete, persistent storage with localStorage.</div>
+            <div class="links"><a class="chip" href="#">Live</a><a class="chip" href="https://github.com/Mlvprasadgithub/todo">Code</a></div>
+          </article>
+
+          <article class="card proj">
+            <div class="title">Fitness Tracker</div>
+            <div class="desc">Inspired by Solo Leveling — tracks daily exercises and streaks. Built with Firebase for auth and Firestore for progress.</div>
+            <div class="links"><a class="chip" href="#">Live</a><a class="chip" href="https://github.com/Mlvprasadgithub/fitness-tracker">Code</a></div>
+          </article>
+
+          <article class="card proj">
+            <div class="title">Portfolio Website</div>
+            <div class="desc">This very portfolio — single-file starter template. Clean, responsive and simple to customize.</div>
+            <div class="links"><a class="chip" href="#">Live</a><a class="chip" href="https://github.com/Mlvprasadgithub/portfolio">Code</a></div>
+          </article>
+
+          <article class="card proj">
+            <div class="title">Internship Project — Data Dashboard</div>
+            <div class="desc">Remote internship project with data visualizations using Excel/Power BI and interactive views.</div>
+            <div class="links"><a class="chip" href="#">Demo</a><a class="chip" href="https://github.com/Mlvprasadgithub/data-dashboard">Code</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="cards" style="margin-top:12px">
+          <div class="card">
+            <h3>Technologies</h3>
+            <div class="skills">
+              <div class="skill">HTML</div>
+              <div class="skill">CSS</div>
+              <div class="skill">JavaScript</div>
+              <div class="skill">Git</div>
+              <div class="skill">Firebase</div>
+              <div class="skill">React (learning)</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Tools & Soft skills</h3>
+            <div style="color:var(--muted)">VS Code • Chrome DevTools • Agile teamwork • Communication • Problem solving</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="card" style="margin-top:12px;display:flex;gap:16px;flex-direction:column">
+          <p style="color:var(--muted)">Want to hire me? Send a message and I'll reply soon.</p>
+          <form id="contactForm" style="display:grid;gap:10px;max-width:520px">
+            <input id="name" type="text" placeholder="Your name" required style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+            <input id="email" type="email" placeholder="Your email" required style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+            <textarea id="message" placeholder="Your message" rows="4" required style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit"></textarea>
+            <div style="display:flex;gap:8px">
+              <button type="submit" class="btn">Send message</button>
+              <button type="button" id="downloadBtn" class="btn">Download CV</button>
+            </div>
+            <div id="status" style="color:var(--muted);font-size:13px"></div>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        Built with ❤️ • LAKSHMI VARA PRASAD MANDALA — © <span id="year"></span>
+      </footer>
+
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const status = document.getElementById('status');
+      if(!name || !email || !message){ status.textContent = 'Please fill all fields.'; return }
+      const subject = encodeURIComponent('Portfolio contact from ' + name);
+      const body = encodeURIComponent(message + '\n\nContact: ' + email);
+      window.location.href = `mailto:mandalalakshmivaraprasad@gmail.com?subject=${subject}&body=${body}`;
+      status.textContent = 'Opening email client...';
+    });
+
+    document.getElementById('downloadBtn').addEventListener('click', ()=>{
+      const cvText = `LAKSHMI VARA PRASAD MANDALA\nWeb Developer (Fresher)\nEmail: mandalalakshmivaraprasad@gmail.com\nPhone: 9100414597\n\nSummary:\nMotivated fresher skilled in HTML, CSS, JavaScript.\n\nEducation:\nB.Tech in CSE - Your College\n\nProjects:\n- To-Do List App\n- Fitness Tracker\n- Data Dashboard`;
+      const blob = new Blob([cvText], {type:'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'LakshmiVaraPrasadMandala_CV.txt'; a.click(); URL.revokeObjectURL(url);
+    });
+
+    document.querySelector('.logo').tabIndex = 0;
+  </script>
+</body>
+</html>
